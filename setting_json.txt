@@ -1,0 +1,307 @@
+{
+  // デバッグ中にインラインで変数の内容を表示する
+  "debug.inlineValues": "off",
+  // デバッグコンソールの表示方法
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  // デバッグビューの表示方法
+  "debug.openDebug": "openOnSessionStart",
+  // テキストコピー時に書式設定を含める
+  "editor.copyWithSyntaxHighlighting": false,
+  // ドラッグアンドドロップで選択範囲のテキストを移動できるようにする
+  "editor.dragAndDrop": false,
+  // ミニマップの最大幅
+  "editor.minimap.maxColumn": 60,
+  // ミニマップのスライダーの表示方法
+  "editor.minimap.showSlider": "always",
+  // ミニマップのサイズ
+  "editor.minimap.size": "fit",
+  // 制御文字を表示
+  "editor.renderControlCharacters": true,
+  // エディター上での空白文字の表示方法
+  "editor.renderWhitespace": "all",
+  // 行の折りたたみ記号の表示方法
+  "editor.showFoldingControls": "always",
+  // 単語の区切り文字
+  //"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\|;:'",.<>/?　、。！？「」【】『』（）",
+  // 行の折り返し表示
+  "editor.wordWrap": "on",
+  // 名前重複時の名前付け規則
+  "explorer.incrementalNaming": "smart",
+  // 改行コードの規定値
+  "files.eol": "\n",
+  // ファイル保存時に行末に改行を挿入
+  "files.insertFinalNewline": true,
+  // 監視対象から外すファイル・ディレクトリのパスのパターン
+  // 検索ビューの検索結果に行数を併記
+  "search.showLineNumbers": true,
+  // ターミナルで選択したテキストをクリップボードにコピー
+  "terminal.integrated.copyOnSelection": true,
+  // エディターのタブのサイズ
+  "workbench.editor.tabSizing": "shrink",
+  // ファイルアイコンテーマ
+  "workbench.iconTheme": "material-icon-theme",
+  //開始と終了のブラケットをセットで同じカラーにする
+  "editor.bracketPairColorization.enabled": true,
+  //ファイルツリーにインデントのガイド線を表示する&サイズ変更
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 16,
+  //勝手に追加されてくやつ
+  "sync.gist": "358f05a39c204047d8a4d4467dd3a48c",
+  "explorer.confirmDelete": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.profiles.osx": {
+        "zsh-rosetta": {
+      "path": "arch",
+      "args": [
+        "-x86_64",
+        "zsh",
+        "-l"
+      ],
+      "overrideName": true
+    }
+  },
+  "codic.ACCESS_TOKEN": "0fKsgy7jMmqGZW2TcZZlTta7Q0RRUdwFHa",
+  "codic.case": "snake_case",
+  "editor.formatOnPaste": true,
+  //CとC++でフォーマットを変える
+  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
+  //latex
+  //https://zenn.dev/thor/articles/732c3e007f77ee
+  // for build
+  "latex-workshop.latex.outDir": "../tex/out",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  // tex-workshopで紐づけられているPDF表示コマンドで表示するPDFビューア
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (lualatex)🧋",
+      "tools": [
+        "lualatexmk"
+      ]
+    },
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": [
+        "latexmk_rconly"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": [
+        "rnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": [
+        "jnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "tectonic",
+      "tools": [
+        "tectonic"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-file-line-error",
+        "-interaction=nonstopmode",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2texmintex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "--synctex",
+        "--keep-logs",
+        "%DOC%.tex"
+      ],
+      "env": {}
+    }
+  ],
+  "workbench.editorAssociations": {
+    "*.wav": "wavPreview.audioPreview"
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "extensions.ignoreRecommendations": true,
+  "editor.accessibilitySupport": "off",
+"files.autoSave": "afterDelay",
+"[python]": {
+  "editor.tabSize": 4
+},
+"files.trimFinalNewlines": true,
+// enterでサジェストを決定しない
+"editor.acceptSuggestionOnEnter": "off",
+// これをfalseにするとkeywordだけ消してくれる
+"editor.suggest.showKeywords": false,
+// textもいらないので消す
+"editor.suggest.showWords": false,
+// snippetのサジェストを最初に出す。
+"editor.snippetSuggestions": "top",
+// 入力した時にどの項目にカーソルを合わせた状態にするかみたいなやつrecentlyUsedByPrefixにした
+"editor.suggestSelection": "recentlyUsedByPrefix",
+"update.showReleaseNotes": false,
+"workbench.startupEditor": "none",
+"code-runner.runInTerminal": true,
+"security.workspace.trust.untrustedFiles": "open",
+"editor.parameterHints.enabled": false,
+"editor.suggest.showTypeParameters": false,
+"breadcrumbs.showTypeParameters": false,
+"editor.parameterHints.cycle": false,
+"code-runner.executorMap": {
+
+  "javascript": "node",
+  "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+  "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "zig": "zig run",
+  "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "php": "php",
+  "python": "python -u",
+  "perl": "perl",
+  "perl6": "perl6",
+  "ruby": "ruby",
+  "go": "go run",
+  "lua": "lua",
+  "groovy": "groovy",
+  "powershell": "powershell -ExecutionPolicy ByPass -File",
+  "bat": "cmd /c",
+  "shellscript": "bash",
+  "fsharp": "fsi",
+  "csharp": "scriptcs",
+  "vbscript": "cscript //Nologo",
+  "typescript": "ts-node",
+  "coffeescript": "coffee",
+  "scala": "scala",
+  "swift": "swift",
+  "julia": "julia",
+  "crystal": "crystal",
+  "ocaml": "ocaml",
+  "r": "Rscript",
+  "applescript": "osascript",
+  "clojure": "lein exec",
+  "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+  "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+  "racket": "racket",
+  "scheme": "csi -script",
+  "ahk": "autohotkey",
+  "autoit": "autoit3",
+  "dart": "dart",
+  "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+  "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+  "haskell": "runghc",
+  "nim": "nim compile --verbosity:0 --hints:off --run",
+  "lisp": "sbcl --script",
+  "kit": "kitc --run",
+  "v": "v run",
+  "sass": "sass --style expanded",
+  "scss": "scss --style expanded",
+  "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+  "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "sml": "cd $dir && sml $fileName",
+  "mojo": "mojo run"
+},
+"editor.minimap.enabled": false,
+"editor.hover.enabled": false,
+"editor.acceptSuggestionOnCommitCharacter": false,
+"python.terminal.activateEnvironment": false
+
+}
